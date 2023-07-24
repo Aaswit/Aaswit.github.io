@@ -4,7 +4,7 @@ from flask_pymongo import PyMongo
 import os
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb+srv://Aaswit:Aashu%403108@chatgpt.irp2elt.mongodb.net/chatgpt"
