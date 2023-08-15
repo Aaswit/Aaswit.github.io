@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Now!</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "poppins", sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            background-color: #0c1022;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 350px;
+            height: 550px;
+            background: rgba(0, 0, 0.75);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 32px;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            height: 650px;
+            width: 650px;
+            background: conic-gradient(transparent, transparent, transparent, #d400d4);
+            animation: animate 4s linear infinite;
+            animation-delay: -2s;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            height: 650px;
+            width: 650px;
+            background: conic-gradient(transparent, transparent, transparent, #00cfff);
+            animation: animate 4s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .image {
+            position: absolute;
+            inset: 5px;
+            background-color: #0c1022;
+            z-index: 1;
+            border-radius: 16px;
+        }
+
+        .form-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+        }
+
+        .form-box .form h2 {
+            margin-top: 20px;
+            font-size: 32px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .form .input-box {
+            position: relative;
+            margin: 30px 0;
+            width: 310px;
+            border-bottom: 2px solid #fff;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 50px;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            padding: 0 35px 0 5px;
+            color: #fff;
+        }
+
+        .input-box ion-icon {
+            position: absolute;
+            right: 8px;
+            color: #fff;
+            font-size: 1.2em;
+            top: 20px;
+        }
+
+        input:focus~label,
+        input:valid~label {
+            top: -5px;
+        }
+
+        .input-box label {
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 16px;
+            pointer-events: none;
+            transition: .3s;
+        }
+
+        .group {
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-top: -5px;
+        }
+
+        .group a {
+            position: absolute;
+            color: #00cfff;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .group a:hover {
+            font-size: 14px;
+            color: #d400d4;
+        }
+
+        button {
+            height: 40px;
+            width: 90px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #0c1022;
+            border: 2px solid #fff;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            font-size: 16px;
+            color: #00cfff;
+            background-color: #0c1022;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image">
+            <div class="form-box">
+                <div class="form">
+                    <h2>Register</h2>
+                    <div class="input-box">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input-box">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="input-box">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required>
+                        <label for="">Confirm Password</label>
+                    </div>
+                    <div class="group">
+                        <p>Already have an account?<a href="/">Sign in</a></p>
+                    </div>
+                    <button type="button" onclick="redirectToLoginPage()">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        function redirectToLoginPage() {
+            const username = document.querySelector('input[type="text"]');
+            const email = document.querySelector('input[type="email"]');
+            const password = document.querySelector('input[type="password"]');
+            const confirmPassword = document.querySelectorAll('input[type="password"]')[1];
+
+            if (username.value.trim() === '' || email.value.trim() === '' || password.value.trim() === '' || confirmPassword.value.trim() === '') {
+                alert('Please fill in all required fields.');
+            } else {
+                window.location.href = "/";
+            }
+        }
+    </script>
+</body>
+
+</html>

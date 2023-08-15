@@ -1,0 +1,139 @@
+body{
+    background: linear-gradient(rgba(131, 56, 253, 0.69), rgba(131, 56, 253, 0.69)), url("https://cdn.cbeditz.com/cbeditz/preview/cloud-sky-background-full-hd-for-photoshop-cb-editing-11621551589yizvfuiotp.jpg");
+    background-size: cover;
+    color: white;
+    font-family: cursive;
+}
+
+.div-nav{
+    padding: 9px;
+    font-size: 20px;
+}
+
+
+.section {
+    margin: 20px;
+    padding: 20px;
+}
+
+.inputbox {
+    display: flex;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    border: none;
+    cursor: pointer;
+    background-color: #b92c2c;
+}
+
+.inputbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px; /* Optional: Set a maximum width for the inputbox */
+}
+
+#daysInput {
+    font-size: 18px; /* Adjust the font size as needed */
+    padding: 8px; /* Optional: Add padding to the input box */
+    width: 100%; /* Optional: Set the input box width to 100% */
+}
+
+.month-container {
+    display: flex;
+}
+
+.month-box {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+}
+
+.month-box:hover {
+    background-color: #000000;
+}
+
+.or-text {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    position: relative;
+}
+
+.or-text::before,
+.or-text::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    border-top: 1px solid #ccc;
+}
+
+.or-text::before {
+    left: 0;
+}
+
+.or-text::after {
+    right: 0;
+}
+
+.hr-line {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.date-box {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.date-para {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.svg {
+    display: flex;
+    align-items: center;
+}
+
+.date-input {
+    font-size: 16px;
+    padding: 5px;
+    width: 150px;
+    border: 1px solid #ccc; /* Add box border to date picker */
+    border-radius: 5px; /* Optional: Add border radius for a more rounded appearance */
+    outline: none;
+}
+
+.month-box {
+    margin-left: 5px;
+}
+
+.next {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.next a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
