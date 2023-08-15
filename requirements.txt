@@ -1,5 +1,0 @@
-bson
-flask
-openai
-flask-pymongo
-os
