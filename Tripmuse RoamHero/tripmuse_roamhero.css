@@ -1,0 +1,74 @@
+body {
+    background-color: rgba(131, 56, 253, 0.69);
+    color: white;
+    text-align: center;
+    /* background-image: url("https://cdn.cbeditz.com/cbeditz/preview/cloud-sky-background-full-hd-for-photoshop-cb-editing-11621551589yizvfuiotp.jpg"); */
+    background: linear-gradient(rgba(131, 56, 253, 0.69), rgba(131, 56, 253, 0.69)), url("https://cdn.cbeditz.com/cbeditz/preview/cloud-sky-background-full-hd-for-photoshop-cb-editing-11621551589yizvfuiotp.jpg");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 200px;
+}
+
+.search-bar {
+    margin-top: 100px;
+    border: none;
+}
+
+.search-bar input[type="text"] {
+    background: rgb(255, 255, 255);
+    border-radius: 100px;
+    margin-bottom: 0px;
+    padding: 17px 195px 17px 16px;
+    width: 200px;
+    height: 40px;
+    font-family: Sora;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.search-bar input[type="submit"] {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: rgb(131, 56, 253);
+    width: 140px;
+    font-family: Sora;
+    font-weight: bolder;
+    font-size: 17px;
+    line-height: 72.6px;
+    color: rgb(255, 255, 255);
+    border: none;
+    margin-left: -102px;
+}
+
+.marquee {
+    display: flex;
+    justify-content: space-between; /* To create equal space between buttons */
+    overflow: hidden;
+    white-space: nowrap; /* Prevents the text from wrapping */
+    margin-top: 200px; /* Adjust the spacing from the search bar */
+}
+
+.marquee span {
+    display: inline-block;
+    margin: 0 10px; /* Adjust the spacing between buttons */
+    padding: 10px 20px;
+    background-color: rgb(131, 56, 253);
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.marquee span:hover{
+    background-color: black;
+    color:rgb(240, 202, 12);
+}

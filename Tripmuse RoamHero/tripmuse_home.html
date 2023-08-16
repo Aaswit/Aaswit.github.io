@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripMuse RoamHero - A Perfect Travel Planner!</title>
+    <link rel="stylesheet" href="static\css\tripmuse_roamhero.css">
+</head>
+
+<body>
+    <h1>TripMuse RoamHero</h1>
+    <div class="search-bar">
+        <form action="/itinerary">
+            <input type="text" placeholder="So Where's the next trip to..." name="search" required />
+            <input type="submit" value="Let's Roam!" />
+        </form>
+    </div>
+
+    <div class="marquee">
+        <marquee direction="left">
+            <span onclick="redirectToItinerary('kashmir')">Kashmir</span>
+            <span onclick="redirectToItinerary('rajasthan')">Rajasthan</span>
+            <span onclick="redirectToItinerary('punjab')">Punjab</span>
+            <span onclick="redirectToItinerary('maldives')">Maldives</span>
+            <span onclick="redirectToItinerary('paris')">Paris</span>
+            <span onclick="redirectToItinerary('usa')">United States</span>
+            <span onclick="redirectToItinerary('england')">England</span>
+            <span onclick="redirectToItinerary('mauritius')">Mauritius</span>
+            <span onclick="redirectToItinerary('australia')">Australia</span>    
+    </marquee>
+    </div>
+
+
+    <script src="static\js\roamaround.js"></script>
+</body>
+</html>
